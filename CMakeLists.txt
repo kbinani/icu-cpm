@@ -10,9 +10,13 @@ if (POLICY CMP0135)
   cmake_policy(SET CMP0135 OLD)
 endif()
 
-if(NOT ICU_PATH)
-	set(ICU_PATH "${CMAKE_CURRENT_SOURCE_DIR}/icu")
-endif()
+include(cmake/CPM.cmake)
+CPMAddPackage(
+  NAME icu
+  URL https://github.com/unicode-org/icu/archive/c7e967c456ceff6436607ca2a3da034320ca34c3.zip
+  URL_HASH SHA256=f64d60ca0b803b1980ddfa5fdb7b9fd43deee51dde0028e87086848ffb1e3918
+  DOWNLOAD_ONLY)
+set(ICU_PATH "${icu_SOURCE_DIR}")
 
 include(cmake/utils.cmake)
 
