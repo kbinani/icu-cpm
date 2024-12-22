@@ -90,7 +90,7 @@ message(STATUS "Is generate the install target: ${ICU_INSTALL}")
 
 # ----- Find source file -----
 
-set(STUBDATA_SRC "icu/icu4c/source/stubdata/stubdata.cpp")
+set(STUBDATA_SRC "${ICU_PATH}/icu4c/source/stubdata/stubdata.cpp")
 if(ICU_BUILD_UC)
   append_prefix_to_file_list("${ICU_PATH}/icu4c/source/common/sources.txt" UC_SOURCE_FILE_LIST "${ICU_PATH}/icu4c/source/common/")
   if(ICU_BUILD_DEBUG_INFO)
