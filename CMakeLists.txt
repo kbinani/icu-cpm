@@ -13,9 +13,9 @@ endif()
 include(cmake/CPM.cmake)
 CPMAddPackage(
   NAME icu
-  VERSION 76.1
-  URL https://github.com/unicode-org/icu/archive/refs/tags/release-76-1.zip
-  URL_HASH SHA256=bf9bf92b514dcd9de461961fd922c24a97be4d6e29a0b60b1f8d0bb029e1e449
+  VERSION 78.1
+  URL https://github.com/unicode-org/icu/archive/refs/tags/release-78.1.zip
+  URL_HASH SHA256=1b628d8651e381b0efa1ec1dd951b9e65e2870642ae6c803c3db379b10c51845
   DOWNLOAD_ONLY)
 set(ICU_PATH "${icu_SOURCE_DIR}")
 
